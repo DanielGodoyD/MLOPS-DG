@@ -1,2 +1,6 @@
 # Ignore all files in any directory named env
-env/
+/env/
+
+/MLOPS_CasoPractico07_Codespaces.pdf
+
+/src/Caso Renovación de Préstamo.ipynb
