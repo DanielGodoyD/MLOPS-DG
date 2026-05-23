@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 
-DATA_PATH = Path("data/Clasificacion_picos_intensidad.csv")
+DATA_PATH = Path("data/Resultado_renovacion_prestamo.csv")
 N = 1500
 RANDOM_STATE = 42
 
