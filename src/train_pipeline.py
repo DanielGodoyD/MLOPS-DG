@@ -6,13 +6,12 @@ from pathlib import Path
 
 import numpy as np  # noqa: F401
 import pandas as pd
-from sklearn.model_selection import train_test_split, StratifiedKFold, GridSearchCV
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.ensemble import RandomForestClassifier 
-from sklearn.metrics import make_scorer, recall_score, precision_score, f1_score, roc_auc_score, accuracy_score, confusion_matrix, classification_report
-from imblearn.over_sampling import SMOTE
+from sklearn.metrics import make_scorer, recall_score, precision_score, f1_score, roc_auc_score, accuracy_score
 
-#from generate_data import generate, DATA_PATH
+
+# from generate_data import generate, DATA_PATH
 
 DATA_PATH = Path("data/Resultado_renovacion_prestamo.csv")
 
@@ -49,7 +48,6 @@ def load_data() -> pd.DataFrame:
     """Carga o genera el dataset."""
     if not DATA_PATH.exists():
         log.info("No hay data")
-        #generate()
     return pd.read_csv(DATA_PATH)
 
 

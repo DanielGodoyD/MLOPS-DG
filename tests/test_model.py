@@ -5,11 +5,14 @@ import sys
 import pandas as pd
 import numpy as np
 import pytest
+from pathlib import Path
 
 sys.path.insert(0, "src")
 
-from train_pipeline import train, FEATURES, DATA_PATH  # noqa: E402
+from train_pipeline import train, FEATURES # noqa: E402
 
+# Ruta absoluta al archivo de datos (no depende del directorio de trabajo actual)
+DATA_PATH = Path(__file__).parent.parent / "data" / "Resultado_renovacion_prestamo.csv"
 
 @pytest.fixture(scope="module")
 def modelo_entrenado(tmp_path_factory):

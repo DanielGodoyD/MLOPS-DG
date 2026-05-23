@@ -3,7 +3,8 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 
-DATA_PATH = Path("data/Resultado_renovacion_prestamo.csv")
+# Ruta absoluta al archivo de datos (no depende del directorio de trabajo actual)
+DATA_PATH = Path(__file__).parent.parent / "data" / "Resultado_renovacion_prestamo.csv"
 N = 1500
 RANDOM_STATE = 42
 
