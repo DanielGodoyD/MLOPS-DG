@@ -183,5 +183,5 @@ def test_model_predict_proba_sums_to_one(modelo_entrenado):
 
 def test_model_is_random_forest(modelo_entrenado):
     """El modelo debe ser un RandomForestClassifier."""
-    from sklearn.tree import RandomForestClassifier
+    from sklearn.ensemble import RandomForestClassifier 
     assert isinstance(modelo_entrenado, RandomForestClassifier)
