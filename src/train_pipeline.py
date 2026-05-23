@@ -19,7 +19,7 @@ ARTIFACTS = Path("artifacts")
 MODEL_PATH = ARTIFACTS / "modelo.pkl"
 METRICS_PATH = ARTIFACTS / "metrics.json"
 
-FEATURES = ['MES', 'CLIENTE', 'Plazo_Renovado',  'Nro_Entidades',
+FEATURES = ['Plazo_Renovado',  'Nro_Entidades',
        'Dif_Entidades', 'Meses_oferta', 'EDAD', 'Flag_LimProv',
        'Uso_Linea_LOG', 'Uso_TrimLinea_LOG', 'Saldo_Consumo_LOG',
        'SUELDO_ESTIMADO_LOG', 'ANTIGUEDAD_MES_LOG', 'Linea_Renovado_LOG',

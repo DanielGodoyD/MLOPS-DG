@@ -1,11 +1,11 @@
 {
-  "f1": 0.1106,
-  "recall": 0.6231,
-  "accuracy": 0.6,
+  "f1": 0.1107,
+  "recall": 0.6298,
+  "accuracy": 0.5961,
   "params": {
     "class_weight": "balanced",
     "max_depth": 10,
-    "min_samples_leaf": 1,
+    "min_samples_leaf": 4,
     "n_estimators": 150
   },
   "recall_minimo": 0.6

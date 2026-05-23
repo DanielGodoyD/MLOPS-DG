@@ -4,24 +4,11 @@ import pandas as pd
 from pathlib import Path
 
 sys.path.insert(0, "src")
+from train_pipeline import FEATURES, TARGET # noqa: E402
 
-# Ruta absoluta al archivo de datos (no depende del directorio de trabajo actual)
+# Ruta absoluta al archivo de datos (para que lo lea el makefile sin importar el directorio de trabajo)
 DATA_PATH = Path(__file__).parent.parent / "data" / "Resultado_renovacion_prestamo.csv"
 
-FEATURES = ['MES', 'CLIENTE', 'Plazo_Renovado',  'Nro_Entidades',
-       'Dif_Entidades', 'Meses_oferta', 'EDAD', 'Flag_LimProv',
-       'Uso_Linea_LOG', 'Uso_TrimLinea_LOG', 'Saldo_Consumo_LOG',
-       'SUELDO_ESTIMADO_LOG', 'ANTIGUEDAD_MES_LOG', 'Linea_Renovado_LOG',
-       'Ahorro_LOG', 'Prestamo_vigente_LOG', 'Promed_6Mdeuda_LOG',
-       'Deuda_Cubierta%_LOG', 'REGION_CALLAO', 'REGION_CENTRO',
-       'REGION_LIMA BALNEARIO', 'REGION_LIMA CENTRO', 'REGION_LIMA ESTE',
-       'REGION_LIMA MODERNA', 'REGION_LIMA NORTE', 'REGION_LIMA PROVINCIA',
-       'REGION_LIMA SUR', 'REGION_NORTE', 'REGION_OESTE', 'REGION_ORIENTE',
-       'REGION_SIERRA CENTRAL', 'REGION_SUR', 'SEXO_F', 'SEXO_M',
-       'EST_CIVIL_C', 'EST_CIVIL_D', 'EST_CIVIL_S', 'EST_CIVIL_U',
-       'EST_CIVIL_V', 'EST_CIVIL_X', 'EST_CIVIL_Y', 'Cluster']
-
-TARGET = "FLAG_VENTA"
 
 def test_generate_has_correct_columns():
     """El dataset debe tener todas las columnas esperadas."""

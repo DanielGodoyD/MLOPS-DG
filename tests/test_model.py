@@ -8,8 +8,7 @@ import pytest
 from pathlib import Path
 
 sys.path.insert(0, "src")
-
-from train_pipeline import train, FEATURES # noqa: E402
+from train_pipeline import train # noqa: E402
 
 # Ruta absoluta al archivo de datos (no depende del directorio de trabajo actual)
 DATA_PATH = Path(__file__).parent.parent / "data" / "Resultado_renovacion_prestamo.csv"
@@ -129,7 +128,7 @@ def test_model_predict_proba_shape(modelo_entrenado):
                             'Cluster':[1]})
 
     proba = modelo_entrenado.predict_proba(X)
-    assert proba.shape == (9, 2)
+    assert proba.shape == (1, 2)
     assert (proba >= 0).all() and (proba <= 1).all()
 
 
