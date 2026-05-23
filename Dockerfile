@@ -1,10 +1,10 @@
-# Dockerfile — API de Picos de Intensidad
+# Dockerfile — API de Renovacion de prestamos
 # Usado por GitHub Actions (Job 3: build-docker) y por make docker
 
 FROM python:3.10-slim
 
-LABEL maintainer="MLOps Picos Intensidad"
-LABEL description="Imagen CI/CD del modelo de clasificación de picos de intensidad"
+LABEL maintainer="MLOps Renovacion de prestamos"
+LABEL description="Imagen CI/CD del modelo de clasificación de renovación de préstamos"
 LABEL version="1.0.0"
 
 ENV PYTHONDONTWRITEBYTECODE=1 \

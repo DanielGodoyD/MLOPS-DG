@@ -24,7 +24,7 @@ test:
 # ── Generar datos y entrenar modelo ───────────────────────────────────────────
 train:
 	@echo "=== Generando datos ==="
-	python src/generate_data.py
+#	python src/generate_data.py
 	@echo "=== Entrenando modelo ==="
 	python src/train_pipeline.py
 
@@ -36,9 +36,9 @@ validate:
 # ── Build de imagen Docker ────────────────────────────────────────────────────
 docker:
 	@echo "=== Construyendo imagen Docker ==="
-	docker build -t picos-intensidad-api:local .
+	docker build -t renovacion-prestamos-api:local .
 	@echo "=== Smoke test ==="
-	docker run --rm picos-intensidad-api:local python -c \
+	docker run --rm renovacion-prestamos-api:local python -c \
 		"import pickle; m=pickle.load(open('artifacts/modelo.pkl','rb')); print('Modelo OK:', type(m).__name__)"
 
 # ── Limpiar artefactos generados ──────────────────────────────────────────────
